@@ -8,7 +8,7 @@ profile:
   align: right
   image: profile_pic.png
   image_circular: true # crops the image to make it circular
-  more_info: <center><i>"You'll Never Walk Alone"</i></center>
+  #more_info: <center><i>#YNWA</i></center>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
