@@ -1,0 +1,9 @@
+<div class="section__header">
+  <h2 id="bio-heading" class="section__title">About</h2>
+</div>
+<div class="bio__content">
+  {{ with .Page }}
+    {{ .Content | safeHTML }}
+  {{ end }}
+  <p class="bio__email"><span class="bio__email-label">Email</span> <code>$first_name.$last_name@gmail.com</code></p>
+</div>

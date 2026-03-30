@@ -1,0 +1,104 @@
+baseURL = "https://ink-pad.github.io/"
+languageCode = "en-US"
+title = "Inkit Padhi"
+enableRobotsTXT = true
+enableGitInfo = true
+summaryLength = 70
+
+[build]
+  writeStats = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "github"
+    lineNos = false
+    codeFences = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
+
+[params]
+  author = "Inkit Padhi"
+  description = "Member of Technical Staff at IBM Research, New York, working on AI safety, trustworthy AI, and natural language processing"
+  keywords = ["AI safety", "trustworthy AI", "natural language processing", "machine learning", "generative models", "drug discovery"]
+  tagline = "ML & NLP Researcher"
+  institution = "IBM Research, New York"
+  institutionURL = "https://research.ibm.com"
+  position = "Member of Technical Staff"
+  email = "inkit.padhi@gmail.com"
+  profileImage = "/images/profile_pic.jpg"
+  ogImage = "/images/profile_pic.jpg"
+  utterancesRepo = "ink-pad/ink-pad.github.io"
+  analyticsProvider = ""
+  analyticsID = ""
+  googleScholarID = "c4yuGSoAAAAJ"
+  orcidID = ""
+  githubUser = "ink-pad"
+  twitterUser = ""
+  linkedinUser = ""
+  cvPath = "/files/cv.pdf"
+  bioCollapsedWords = 80
+  newsOnHomepage = 5
+  featuredPubsOnHomepage = 5
+  recentPostsOnHomepage = 3
+  copyright = "Inkit Padhi"
+
+[outputs]
+  home    = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  page    = ["HTML"]
+
+[outputFormats]
+  [outputFormats.JSON]
+    mediaType = "application/json"
+    baseName  = "index"
+    isPlainText = true
+
+[taxonomies]
+  tag      = "tags"
+  category = "categories"
+
+[permalinks]
+  [permalinks.page]
+    blog = "/blog/:slug/"
+  [permalinks.section]
+    blog = "/blog/"
+    news = "/news/"
+    papers = "/papers/"
+
+[menu]
+  [[menu.main]]
+    name       = "About"
+    url        = "/#about"
+    weight     = 10
+  [[menu.main]]
+    name       = "Publications"
+    url        = "/papers/"
+    weight     = 20
+  [[menu.main]]
+    name       = "News"
+    url        = "/news/"
+    weight     = 30
+  # [[menu.main]]
+  #   name       = "Blog"
+  #   url        = "/blog/"
+  #   weight     = 40
+  [[menu.main]]
+    name       = "Google Scholar"
+    url        = "https://scholar.google.com/citations?user=c4yuGSoAAAAJ&hl=en"
+    weight     = 45
+    [menu.main.params]
+      external = true
+  [[menu.main]]
+    name       = "CV"
+    url        = "/files/cv.pdf"
+    weight     = 50
+
+[minify]
+  disableCSS  = false
+  disableJS   = false
+  disableHTML = false

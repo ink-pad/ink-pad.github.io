@@ -1,0 +1,68 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <div class="section__header">
+      <h1 class="section__title">Blog</h1>
+      <p class="section__subtitle">{{ with .Description }}{{ . }}{{ else }}Thoughts on research, tutorials, and conference recaps.{{ end }}</p>
+    </div>
+
+    {{/* Tag filter */}}
+    {{ $allTags := slice }}
+    {{ range .Pages }}
+      {{ with .Params.tags }}
+        {{ range . }}
+          {{ $allTags = $allTags | append . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ $allTags = $allTags | uniq | sort }}
+    {{ if $allTags }}
+    <div class="tag-filter" role="group" aria-label="Filter by tag">
+      <button class="tag-filter__btn active" data-tag="">All</button>
+      {{ range $allTags }}
+        <button class="tag-filter__btn" data-tag="{{ . }}">{{ . | humanize | title }}</button>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{/* Posts grouped by year */}}
+    {{ $pages := .Pages.GroupByDate "2006" }}
+    {{ range $pages }}
+      <div class="blog-year-group">
+        <h2 class="blog-year-group__title">{{ .Key }}</h2>
+        <div class="blog-posts">
+          {{ range .Pages }}
+            <a href="{{ .Permalink }}" class="post-card" data-tags="{{ delimit .Params.tags " " }}">
+              <div class="post-card__meta">
+                <time class="post-card__date" datetime="{{ .Date.Format "2006-01-02" }}">
+                  {{ dateFormat "Jan 2, 2006" .Date }}
+                </time>
+                <span class="post-card__dot">&middot;</span>
+                <span class="post-card__reading-time">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  {{ math.Round (div (countwords .Content) 200.0) }} min read
+                </span>
+              </div>
+              <h3 class="post-card__title">{{ .Title }}</h3>
+              <p class="post-card__excerpt">{{ .Summary | plainify | truncate 150 }}</p>
+              {{ with .Params.tags }}
+                <div class="post-card__tags">
+                  {{ range . }}
+                    <span class="post-tag">{{ . }}</span>
+                  {{ end }}
+                </div>
+              {{ end }}
+            </a>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+
+    {{ if not .Pages }}
+      <div class="empty-state">
+        <p>No posts yet. Check back soon!</p>
+      </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

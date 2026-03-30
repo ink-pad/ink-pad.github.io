@@ -1,0 +1,138 @@
+/* ===== Design Tokens ===== */
+
+:root {
+  /* --- Colors: Light Mode --- */
+  --color-bg: #ffffff;
+  --color-bg-alt: #f7f8fa;
+  --color-bg-card: #ffffff;
+  --color-bg-code: #f4f5f7;
+  --color-bg-nav: rgba(255, 255, 255, 0.92);
+
+  --color-text: #1a1a2e;
+  --color-text-muted: #5a6a7a;
+  --color-text-inverse: #ffffff;
+
+  --color-accent: #1a3a5c;
+  --color-accent-2: #0e7490;
+  --color-accent-hover: #0c5f75;
+  --color-link: #0e7490;
+  --color-link-hover: #0c5f75;
+
+  --color-border: #e2e8f0;
+  --color-border-accent: #0e7490;
+
+  --color-badge-bg: #e0f2fe;
+  --color-badge-text: #075985;
+  --color-badge-award-bg: #fef9c3;
+  --color-badge-award-text: #854d0e;
+  --color-badge-paper-bg: #dbeafe;
+  --color-badge-paper-text: #1e40af;
+  --color-badge-talk-bg: #ede9fe;
+  --color-badge-talk-text: #6d28d9;
+  --color-badge-career-bg: #d1fae5;
+  --color-badge-career-text: #065f46;
+  --color-badge-release-bg: #fce7f3;
+  --color-badge-release-text: #9d174d;
+
+  --color-shadow: rgba(0, 0, 0, 0.08);
+
+  /* --- Typography --- */
+  --font-serif: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, 'Cascadia Code', monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.75;
+
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+
+  /* --- Spacing (4px base) --- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* --- Layout --- */
+  --container-max: 72rem;
+  --container-narrow: 48rem;
+  --nav-height: 3.75rem;
+
+  /* --- Radius --- */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  /* --- Shadows --- */
+  --shadow-sm: 0 1px 3px var(--color-shadow);
+  --shadow-md: 0 4px 12px var(--color-shadow);
+  --shadow-lg: 0 8px 30px var(--color-shadow);
+
+  /* --- Transitions --- */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* --- Focus --- */
+  --focus-ring: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-accent-2);
+}
+
+/* ===== Dark Mode (Horizon) ===== */
+[data-theme="dark"] {
+  --color-bg: #1c1e26;
+  --color-bg-alt: #252730;
+  --color-bg-card: #252730;
+  --color-bg-code: #2e303a;
+  --color-bg-nav: rgba(28, 30, 38, 0.92);
+
+  --color-text: #d5d8da;
+  --color-text-muted: #8b8d93;
+  --color-text-inverse: #1c1e26;
+
+  --color-accent: #e95678;
+  --color-accent-2: #e95678;
+  --color-accent-hover: #f07a94;
+  --color-link: #e95678;
+  --color-link-hover: #f07a94;
+
+  --color-border: #363840;
+  --color-border-accent: #e95678;
+
+  --color-badge-bg: #2e303a;
+  --color-badge-text: #e95678;
+  --color-badge-award-bg: #3a3020;
+  --color-badge-award-text: #fab795;
+  --color-badge-paper-bg: #252a3a;
+  --color-badge-paper-text: #25b0bc;
+  --color-badge-talk-bg: #2e2540;
+  --color-badge-talk-text: #b877db;
+  --color-badge-career-bg: #1e3230;
+  --color-badge-career-text: #09f7a0;
+  --color-badge-release-bg: #3a2030;
+  --color-badge-release-text: #f48fb1;
+
+  --color-shadow: rgba(0, 0, 0, 0.45);
+}

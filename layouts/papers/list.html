@@ -1,0 +1,11 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <div class="section__header">
+      <h1 class="section__title">Publications</h1>
+      <p class="section__subtitle">A brief glimpse into things I've scribbled. For a comprehensive list, please refer to <a href="{{ (index (where hugo.Data.social "id" "scholar") 0).url }}" target="_blank" rel="noopener">this page</a>.</p>
+    </div>
+    {{ partial "publications-list.html" . }}
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,52 @@
+{{ $pubs := sort hugo.Data.publications "year" "desc" }}
+{{ $owner := site.Params.author }}
+
+{{/* Build lists of unique years, topics, venues for filters */}}
+{{ $years := slice }}
+{{ $venues := slice }}
+{{ range $pubs }}
+  {{ $years = $years | append .year }}
+  {{ $venues = $venues | append .venue }}
+{{ end }}
+{{ $years = $years | uniq | sort | collections.Reverse }}
+{{ $venues = $venues | uniq | sort }}
+
+<div role="region" aria-label="Filter publications">
+  <div class="pub-filters">
+    <div class="pub-filter-group">
+      <label for="pub-search">Search</label>
+      <input type="search" id="pub-search" placeholder="Search papers..." aria-label="Search publications">
+    </div>
+    <div class="pub-filter-group">
+      <label for="filter-year">Year</label>
+      <select id="filter-year">
+        <option value="">All years</option>
+        {{ range $years }}
+          <option value="{{ . }}">{{ . }}</option>
+        {{ end }}
+      </select>
+    </div>
+    <div class="pub-filter-group">
+      <label for="filter-venue">Venue</label>
+      <select id="filter-venue">
+        <option value="">All venues</option>
+        {{ range $venues }}
+          <option value="{{ . }}">{{ . }}</option>
+        {{ end }}
+      </select>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="pub-list" id="pub-list">
+  {{ $currentYear := 0 }}
+  {{ range $pubs }}
+    {{ if ne .year $currentYear }}
+      {{ $currentYear = .year }}
+      <h3 class="pub-year-divider" data-year="{{ .year }}">{{ .year }}</h3>
+    {{ end }}
+    {{ partial "paper-card.html" . }}
+  {{ end }}
+</div>

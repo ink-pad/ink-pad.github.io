@@ -1,0 +1,47 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <div class="section__header">
+      <h1 class="section__title">News</h1>
+      <p class="section__subtitle">{{ with .Description }}{{ . }}{{ else }}Updates, announcements, and milestones.{{ end }}</p>
+    </div>
+    {{ with sort hugo.Data.news "date" "desc" }}
+      <div class="news-list">
+        {{ $currentYear := "" }}
+        {{ range . }}
+          {{ $year := (time .date).Year | string }}
+          {{ if ne $year $currentYear }}
+            {{ $currentYear = $year }}
+            <h3 class="news-year-divider">{{ $year }}</h3>
+          {{ end }}
+          <article class="news-item">
+            <div class="news-item__meta">
+              <time class="news-item__date" datetime="{{ .date }}">
+                {{ dateFormat "Jan 2006" .date }}
+              </time>
+              {{ with .category }}
+                <span class="news-item__badge news-item__badge--{{ . }}">{{ . }}</span>
+              {{ end }}
+            </div>
+            <div class="news-item__body">
+              <p class="news-item__title">{{ .title }}</p>
+              {{ with .body }}
+                <p class="news-item__desc">{{ . }}</p>
+              {{ end }}
+              {{ if .url }}
+                <a href="{{ .url }}" class="news-item__link" target="_blank" rel="noopener">
+                  {{ .url_label | default "Learn more" }} →
+                </a>
+              {{ end }}
+            </div>
+          </article>
+        {{ end }}
+      </div>
+    {{ else }}
+      <div class="empty-state">
+        <p>No news items yet.</p>
+      </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

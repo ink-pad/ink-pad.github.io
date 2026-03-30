@@ -1,0 +1,94 @@
+/* ===== Bio Section ===== */
+
+.bio__content {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-muted);
+  text-align: justify;
+  hyphens: auto;
+}
+
+.bio__content p + p {
+  margin-top: var(--space-4);
+}
+
+.bio__email {
+  margin-top: var(--space-6);
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.bio__email-label {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.bio__email code {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  padding: var(--space-1) var(--space-2);
+  background: var(--color-bg-code);
+  border-radius: var(--radius-sm);
+  color: var(--color-accent-2);
+}
+
+/* Education Timeline */
+.timeline {
+  margin-top: var(--space-8);
+  position: relative;
+  padding-left: var(--space-8);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.75rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.timeline__item {
+  position: relative;
+  padding-bottom: var(--space-6);
+}
+
+.timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline__item::before {
+  content: '';
+  position: absolute;
+  left: calc(-1 * var(--space-8) + 0.5rem);
+  top: 0.4rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: var(--radius-full);
+  background: var(--color-accent-2);
+  border: 2px solid var(--color-bg);
+  box-shadow: 0 0 0 2px var(--color-accent-2);
+}
+
+.timeline__degree {
+  font-weight: 600;
+  font-size: var(--text-base);
+  color: var(--color-text);
+}
+
+.timeline__institution {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  margin-top: var(--space-1);
+}
+
+.timeline__year {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+  margin-top: var(--space-1);
+}

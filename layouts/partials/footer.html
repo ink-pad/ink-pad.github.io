@@ -1,0 +1,14 @@
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer__copyright">
+      &copy; {{ now.Year }} {{ site.Params.copyright | default site.Params.author }}. All rights reserved.
+    </p>
+    <div class="footer__links">
+      {{ range hugo.Data.social }}
+        <a href="{{ .url }}" class="footer__link" {{ if not (hasPrefix .url "mailto:") }}target="_blank" rel="noopener{{ if .rel }} {{ .rel }}{{ end }}"{{ else }}{{ with .rel }}rel="{{ . }}"{{ end }}{{ end }} aria-label="{{ .label }}">
+          {{ .label }}
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</footer>

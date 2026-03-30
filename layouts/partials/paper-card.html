@@ -1,0 +1,54 @@
+{{ $pub := . }}
+{{ $owner := site.Params.author }}
+<article class="paper-card" data-year="{{ $pub.year }}" data-topics="{{ delimit $pub.topics " " }}" data-venue="{{ $pub.venue }}">
+  <h3 class="paper-card__title">
+    {{ with $pub.links.doi }}
+      <a href="{{ . }}" target="_blank" rel="noopener">{{ $pub.title }}</a>
+    {{ else }}
+      {{ with $pub.links.arxiv }}
+        <a href="{{ . }}" target="_blank" rel="noopener">{{ $pub.title }}</a>
+      {{ else }}
+        {{ $pub.title }}
+      {{ end }}
+    {{ end }}
+  </h3>
+  <p class="paper-card__authors">
+    {{ range $i, $author := $pub.authors }}{{ if $i }}, {{ end }}{{ if eq $author $owner }}<strong>{{ $author }}</strong>{{ else }}{{ $author }}{{ end }}{{ end }}
+  </p>
+  <p class="paper-card__venue">
+    <em>{{ $pub.venue_full | default $pub.venue }}</em>, {{ $pub.year }}
+  </p>
+  {{ with $pub.badges }}
+    <div class="paper-card__badges">
+      {{ range . }}
+        <span class="paper-badge">{{ . }}</span>
+      {{ end }}
+    </div>
+  {{ end }}
+  <div class="paper-card__links">
+    {{ with $pub.links.arxiv }}<a href="{{ . }}" class="paper-link" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> arXiv</a>{{ end }}
+    {{ with $pub.links.pdf }}<a href="{{ . }}" class="paper-link" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> PDF</a>{{ end }}
+    {{ with $pub.links.doi }}<a href="{{ . }}" class="paper-link" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg> DOI</a>{{ end }}
+    {{ with $pub.links.code }}<a href="{{ . }}" class="paper-link" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> Code</a>{{ end }}
+    {{ with $pub.links.video }}<a href="{{ . }}" class="paper-link" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg> Video</a>{{ end }}
+    {{ with $pub.links.project }}<a href="{{ . }}" class="paper-link" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Project</a>{{ end }}
+    {{ with $pub.links.slides }}<a href="{{ . }}" class="paper-link" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> Slides</a>{{ end }}
+  </div>
+
+  {{/* BibTeX */}}
+  <div class="bibtex-wrapper">
+    <button class="bibtex-toggle" aria-expanded="false" aria-controls="bibtex-{{ $pub.id }}" data-bibtex-toggle>
+      BibTeX
+    </button>
+    <div class="bibtex-content" id="bibtex-{{ $pub.id }}" hidden>
+      <pre><code>@{{ if eq $pub.venue_type "journal" }}article{{ else }}inproceedings{{ end }}{ {{- $pub.id -}},
+  title     = { {{- $pub.title -}} },
+  author    = { {{- delimit $pub.authors " and " -}} },
+  year      = { {{- $pub.year -}} },
+  {{ if eq $pub.venue_type "journal" }}journal{{ else }}booktitle{{ end }} = { {{- $pub.venue_full | default $pub.venue -}} }{{ with $pub.links.doi }},
+  doi       = { {{- . | replaceRE "^https?://doi.org/" "" -}} }{{ end }}
+}</code></pre>
+      <button class="bibtex-copy" data-bibtex-copy aria-label="Copy BibTeX to clipboard">Copy</button>
+    </div>
+  </div>
+</article>

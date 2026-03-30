@@ -1,0 +1,88 @@
+{{ define "main" }}
+
+{{/* Hero */}}
+{{ partial "hero.html" . }}
+
+{{/* Bio + News side by side */}}
+<section class="section" aria-labelledby="bio-heading" style="padding-bottom: var(--space-8);">
+  <div class="container">
+    <div class="home-grid">
+      <div class="home-grid__main">
+        {{ partial "bio.html" . }}
+      </div>
+      <aside class="home-grid__sidebar" aria-labelledby="news-heading">
+        {{ partial "news-preview.html" . }}
+      </aside>
+    </div>
+  </div>
+</section>
+
+{{/* Featured Publications */}}
+<section class="section" aria-labelledby="featured-pubs-heading">
+  <div class="container">
+    <div class="section__header">
+      <h2 id="featured-pubs-heading" class="section__title">Selected Publications</h2>
+    </div>
+    {{ with hugo.Data.publications }}
+      <div class="featured-pubs">
+        {{ $limit := site.Params.featuredPubsOnHomepage | default 3 }}
+        {{ $featured := sort (where . "featured" true) "year" "desc" }}
+        {{ if not $featured }}
+          {{ $featured = first $limit . }}
+        {{ end }}
+        {{ range first $limit $featured }}
+          {{ partial "paper-card.html" . }}
+        {{ end }}
+      </div>
+      <a href="/papers/" class="section__more">
+        View all publications
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    {{ end }}
+  </div>
+</section>
+
+{{/* Recent Blog Posts — hidden until blog content is ready
+{{ $posts := where site.RegularPages "Section" "blog" }}
+{{ if $posts }}
+<section class="section section--alt" aria-labelledby="recent-posts-heading">
+  <div class="container">
+    <div class="section__header">
+      <h2 id="recent-posts-heading" class="section__title">Recent Writing</h2>
+    </div>
+    <div class="recent-posts">
+      {{ $limit := site.Params.recentPostsOnHomepage | default 3 }}
+      {{ range first $limit $posts }}
+        <a href="{{ .Permalink }}" class="post-card">
+          <div class="post-card__meta">
+            <time class="post-card__date" datetime="{{ .Date.Format "2006-01-02" }}">
+              {{ dateFormat "Jan 2, 2006" .Date }}
+            </time>
+            <span class="post-card__dot">&middot;</span>
+            <span class="post-card__reading-time">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              {{ math.Round (div (countwords .Content) 200.0) }} min read
+            </span>
+          </div>
+          <h3 class="post-card__title">{{ .Title }}</h3>
+          <p class="post-card__excerpt">{{ .Summary | plainify | truncate 120 }}</p>
+          {{ with .Params.tags }}
+            <div class="post-card__tags">
+              {{ range . }}
+                <span class="post-tag">{{ . }}</span>
+              {{ end }}
+            </div>
+          {{ end }}
+        </a>
+      {{ end }}
+    </div>
+    <a href="/blog/" class="section__more">
+      View all posts
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+</section>
+{{ end }}
+*/}}
+
+{{ end }}

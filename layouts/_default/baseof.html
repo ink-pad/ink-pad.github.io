@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode }}" data-theme="light">
+<head>
+  {{- partial "head.html" . -}}
+</head>
+<body>
+  <div class="page-wrapper">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    {{- partial "nav.html" . -}}
+    <main id="main-content">
+      {{- block "main" . }}{{ end -}}
+    </main>
+    {{- partial "footer.html" . -}}
+  </div>
+  {{- $main := resources.Get "js/main.js" | minify | fingerprint -}}
+  <script src="{{ $main.RelPermalink }}" defer integrity="{{ $main.Data.Integrity }}"></script>
+  {{- if or .IsHome (eq .Section "papers") -}}
+    {{- $pubs := resources.Get "js/publications.js" | minify | fingerprint -}}
+    <script src="{{ $pubs.RelPermalink }}" defer integrity="{{ $pubs.Data.Integrity }}"></script>
+  {{- end -}}
+  {{- $bib := resources.Get "js/bibtex.js" | minify | fingerprint -}}
+  <script src="{{ $bib.RelPermalink }}" defer integrity="{{ $bib.Data.Integrity }}"></script>
+</body>
+</html>

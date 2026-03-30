@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <div class="section__header">
+      <h1 class="section__title">{{ .Title }}</h1>
+      {{ with .Description }}
+        <p class="section__subtitle">{{ . }}</p>
+      {{ end }}
+    </div>
+    {{ .Content }}
+    {{ range .Pages }}
+      <article style="margin-bottom: var(--space-6);">
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <p style="color: var(--color-text-muted); font-size: var(--text-sm);">{{ .Summary }}</p>
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

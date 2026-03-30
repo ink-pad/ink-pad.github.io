@@ -1,0 +1,37 @@
+<div class="section__header">
+  <h2 id="news-heading" class="section__title">Latest News</h2>
+</div>
+{{ with sort hugo.Data.news "date" "desc" }}
+  <div class="news-list">
+    {{ $limit := site.Params.newsOnHomepage | default 5 }}
+    {{ range first $limit . }}
+      <article class="news-item">
+        <div class="news-item__meta">
+          <time class="news-item__date" datetime="{{ .date }}">
+            {{ dateFormat "Jan 2006" .date }}
+          </time>
+          {{ with .category }}
+            <span class="news-item__badge news-item__badge--{{ . }}">{{ . }}</span>
+          {{ end }}
+        </div>
+        <div class="news-item__body">
+          <p class="news-item__title">{{ .title }}</p>
+          {{ with .body }}
+            <p class="news-item__desc">{{ . }}</p>
+          {{ end }}
+          {{ if .url }}
+            <a href="{{ .url }}" class="news-item__link" target="_blank" rel="noopener">
+              {{ .url_label | default "Learn more" }} →
+            </a>
+          {{ end }}
+        </div>
+      </article>
+    {{ end }}
+  </div>
+  {{ if gt (len .) (site.Params.newsOnHomepage | default 5) }}
+    <a href="/news/" class="section__more">
+      View all news
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  {{ end }}
+{{ end }}

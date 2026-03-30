@@ -1,0 +1,1346 @@
+# ============================================================
+# 2026
+# ============================================================
+
+- id: huang2026agentic-guardrail
+  title: "Building a Foundational Guardrail for General Agentic Systems via Synthetic Data"
+  authors:
+    - "Yue Huang"
+    - "Hang Hua"
+    - "Yujun Zhou"
+    - "Pengcheng Jing"
+    - "Manish Nagireddy"
+    - "Inkit Padhi"
+    - "Greta Dolcetti"
+    - "Zhangchen Xu"
+    - "Subhajit Chaudhury"
+    - "Ambrish Rawat"
+    - "Liubov Nedoshivina"
+    - "Yu Chen"
+    - "Prasanna Sattigeri"
+    - "Xiangliang Zhang"
+  year: 2026
+  venue: "ICLR"
+  venue_full: "International Conference on Learning Representations"
+  venue_type: "conference"
+  topics:
+    - "ai-safety"
+    - "nlp"
+  badges: []
+  links:
+    arxiv: ""
+    doi: "https://openreview.net/forum?id=M47SWYubR5"
+    pdf: "https://openreview.net/pdf?id=M47SWYubR5"
+    code: "https://github.com/HowieHwong/Agentic-Guardian"
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+# ============================================================
+# 2025
+# ============================================================
+
+- id: nagireddy2025cascade-guardrails
+  title: "When in Doubt, Cascade: Towards Building Efficient and Capable Guardrails"
+  authors:
+    - "Manish Nagireddy"
+    - "Inkit Padhi"
+    - "Soumya Ghosh"
+    - "Prasanna Sattigeri"
+  year: 2025
+  venue: "AIES"
+  venue_full: "Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society"
+  venue_type: "conference"
+  topics:
+    - "ai-safety"
+    - "nlp"
+  badges:
+    - "Best Paper"
+  links:
+    arxiv: ""
+    doi: "https://ojs.aaai.org/index.php/AIES/article/view/36676"
+    pdf: "https://ojs.aaai.org/index.php/AIES/article/download/36676/38814"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 3
+  featured: true
+  abstract: ""
+
+- id: padhi2025graniteguardian
+  title: "Granite Guardian: Comprehensive LLM Safeguarding"
+  authors:
+    - "Inkit Padhi"
+    - "Manish Nagireddy"
+    - "Giandomenico Cornacchia"
+    - "Subhajit Chaudhury"
+    - "Tejaswini Pedapati"
+    - "Pierre Dognin"
+    - "Keerthiram Murugesan"
+    - "Erik Miehling"
+    - "Martin Santillan Cooper"
+    - "Kieran Fraser"
+    - "Giulio Zizzo"
+    - "Muhammad Zaid Hameed"
+    - "Mark Purcell"
+    - "Michael Desmond"
+    - "Qian Pan"
+    - "Inge Vejsbjerg"
+    - "Elizabeth M. Daly"
+    - "Michael Hind"
+    - "Werner Geyer"
+    - "Ambrish Rawat"
+    - "Kush R. Varshney"
+    - "Prasanna Sattigeri"
+  year: 2025
+  venue: "NAACL"
+  venue_full: "Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Industry Track)"
+  venue_type: "conference"
+  topics:
+    - "ai-safety"
+    - "nlp"
+  badges: []
+  links:
+    arxiv: "https://arxiv.org/abs/2412.07724"
+    doi: "https://doi.org/10.18653/v1/2025.naacl-industry.49"
+    pdf: "https://aclanthology.org/2025.naacl-industry.49.pdf"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: true
+  abstract: ""
+
+- id: lee2025programming-refusal
+  title: "Programming Refusal with Conditional Activation Steering"
+  authors:
+    - "Bruce W. Lee"
+    - "Inkit Padhi"
+    - "Karthikeyan Natesan Ramamurthy"
+    - "Erik Miehling"
+    - "Pierre Dognin"
+    - "Manish Nagireddy"
+    - "Amit Dhurandhar"
+  year: 2025
+  venue: "ICLR"
+  venue_full: "International Conference on Learning Representations"
+  venue_type: "conference"
+  topics:
+    - "ai-safety"
+    - "machine-learning"
+  badges:
+    - "Spotlight"
+  links:
+    arxiv: "https://arxiv.org/abs/2409.05907"
+    doi: "https://openreview.net/forum?id=Oi47wc10sm"
+    pdf: "https://arxiv.org/abs/2409.05907"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: true
+  abstract: ""
+
+# ============================================================
+# 2024
+# ============================================================
+
+- id: wei2024data-attribution
+  title: "Final-Model-Only Data Attribution with a Unifying View of Gradient-Based Methods"
+  authors:
+    - "Dennis Wei"
+    - "Inkit Padhi"
+    - "Soumya Ghosh"
+    - "Amit Dhurandhar"
+    - "Karthikeyan Natesan Ramamurthy"
+    - "Maria Chang"
+  year: 2024
+  venue: "arXiv"
+  venue_full: "arXiv preprint"
+  venue_type: "preprint"
+  topics:
+    - "machine-learning"
+    - "trustworthy-ai"
+  badges: []
+  links:
+    arxiv: "https://arxiv.org/abs/2412.03906"
+    doi: ""
+    pdf: "https://arxiv.org/abs/2412.03906"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: padhi2024value-alignment
+  title: "Value Alignment from Unstructured Text"
+  authors:
+    - "Inkit Padhi"
+    - "Karthikeyan Natesan Ramamurthy"
+    - "Prasanna Sattigeri"
+    - "Manish Nagireddy"
+    - "Pierre Dognin"
+    - "Kush Varshney"
+  year: 2024
+  venue: "EMNLP"
+  venue_full: "Conference on Empirical Methods in Natural Language Processing (Industry Track)"
+  venue_type: "conference"
+  topics:
+    - "ai-safety"
+    - "nlp"
+  badges: []
+  links:
+    arxiv: ""
+    doi: ""
+    pdf: "https://aclanthology.org/2024.emnlp-industry.81"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: true
+  abstract: ""
+
+- id: nagireddy2024cascade-guardrails
+  title: "When in Doubt, Cascade: Towards Building Efficient and Capable Guardrails"
+  authors:
+    - "Manish Nagireddy"
+    - "Inkit Padhi"
+    - "Soumya Ghosh"
+    - "Prasanna Sattigeri"
+  year: 2024
+  venue: "arXiv"
+  venue_full: "arXiv preprint"
+  venue_type: "preprint"
+  topics:
+    - "ai-safety"
+    - "machine-learning"
+  badges: []
+  links:
+    arxiv: "https://arxiv.org/abs/2407.06323"
+    doi: ""
+    pdf: "https://arxiv.org/abs/2407.06323"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: hou2024wikicontradict
+  title: "WikiContradict: A Benchmark for Evaluating LLMs on Real-World Knowledge Conflicts from Wikipedia"
+  authors:
+    - "Yufang Hou"
+    - "Alessandra Pascale"
+    - "Javier Carnerero-Cano"
+    - "Tigran Tchrakian"
+    - "Radu Marinescu"
+    - "Elizabeth Daly"
+    - "Inkit Padhi"
+    - "Prasanna Sattigeri"
+  year: 2024
+  venue: "arXiv"
+  venue_full: "arXiv preprint"
+  venue_type: "preprint"
+  topics:
+    - "nlp"
+    - "trustworthy-ai"
+  badges: []
+  links:
+    arxiv: "https://arxiv.org/abs/2406.13805"
+    doi: ""
+    pdf: "https://arxiv.org/abs/2406.13805"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: kadhe2024split-unlearn-merge
+  title: "Split, Unlearn, Merge: Leveraging Data Attributes for More Effective Unlearning in LLMs"
+  authors:
+    - "Swanand Ravindra Kadhe"
+    - "Farhan Ahmed"
+    - "Dennis Wei"
+    - "Nathalie Baracaldo"
+    - "Inkit Padhi"
+  year: 2024
+  venue: "arXiv"
+  venue_full: "arXiv preprint"
+  venue_type: "preprint"
+  topics:
+    - "ai-safety"
+    - "machine-learning"
+  badges: []
+  links:
+    arxiv: "https://arxiv.org/abs/2406.11780"
+    doi: ""
+    pdf: "https://arxiv.org/abs/2406.11780"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: dognin2024contextual-moral-values
+  title: "Contextual Moral Value Alignment Through Context-Based Aggregation"
+  authors:
+    - "Pierre Dognin"
+    - "Jesus Rios"
+    - "Ronny Luss"
+    - "Inkit Padhi"
+    - "Matthew D. Riemer"
+    - "Miao Liu"
+    - "Prasanna Sattigeri"
+    - "Manish Nagireddy"
+    - "Kush R. Varshney"
+    - "Djallel Bouneffouf"
+  year: 2024
+  venue: "arXiv"
+  venue_full: "arXiv preprint"
+  venue_type: "preprint"
+  topics:
+    - "ai-safety"
+    - "nlp"
+  badges: []
+  links:
+    arxiv: "https://arxiv.org/abs/2403.12805"
+    doi: ""
+    pdf: "https://arxiv.org/abs/2403.12805"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: achintalwar2024detectors-safe-llms
+  title: "Detectors for Safe and Reliable LLMs: Implementations, Uses, and Limitations"
+  authors:
+    - "Swapnaja Achintalwar"
+    - "Adriana Alvarado Garcia"
+    - "Ateret Anaby-Tavor"
+    - "Ioana Baldini"
+    - "Sara E. Berger"
+    - "Bishwaranjan Bhattacharjee"
+    - "Djallel Bouneffouf"
+    - "Subhajit Chaudhury"
+    - "Pin-Yu Chen"
+    - "Lamogha Chiazor"
+    - "Elizabeth M. Daly"
+    - "Kirushikesh DB"
+    - "Rogerio Abreu de Paula"
+    - "Pierre Dognin"
+    - "Eitan Farchi"
+    - "Soumya Ghosh"
+    - "Michael Hind"
+    - "Raya Horesh"
+    - "George Kour"
+    - "Ja Young Lee"
+    - "Nishtha Madaan"
+    - "Sameep Mehta"
+    - "Erik Miehling"
+    - "Keerthiram Murugesan"
+    - "Manish Nagireddy"
+    - "Inkit Padhi"
+    - "David Piorkowski"
+    - "Ambrish Rawat"
+    - "Orna Raz"
+    - "Prasanna Sattigeri"
+    - "Hendrik Strobelt"
+    - "Sarathkrishna Swaminathan"
+    - "Christoph Tillmann"
+    - "Aashka Trivedi"
+    - "Kush R. Varshney"
+    - "Dennis Wei"
+    - "Shalisha Witherspoon"
+    - "Marcel Zalmanovici"
+  year: 2024
+  venue: "arXiv"
+  venue_full: "arXiv preprint"
+  venue_type: "preprint"
+  topics:
+    - "ai-safety"
+    - "trustworthy-ai"
+  badges: []
+  links:
+    arxiv: "https://arxiv.org/abs/2403.06009"
+    doi: ""
+    pdf: "https://arxiv.org/abs/2403.06009"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: achintalwar2024alignment-studio
+  title: "Alignment Studio: Aligning Large Language Models to Particular Contextual Regulations"
+  authors:
+    - "Swapnaja Achintalwar"
+    - "Ioana Baldini"
+    - "Djallel Bouneffouf"
+    - "Joan Byamugisha"
+    - "Maria Chang"
+    - "Pierre Dognin"
+    - "Eitan Farchi"
+    - "Ndivhuwo Makondo"
+    - "Aleksandra Mojsilovic"
+    - "Manish Nagireddy"
+    - "Karthikeyan Natesan Ramamurthy"
+    - "Inkit Padhi"
+    - "Orna Raz"
+    - "Jesus Rios"
+    - "Prasanna Sattigeri"
+    - "Moninder Singh"
+    - "Siphiwe Thwala"
+    - "Rosario A. Uceda-Sosa"
+    - "Kush R. Varshney"
+  year: 2024
+  venue: "IEEE Internet Computing"
+  venue_full: "IEEE Internet Computing"
+  venue_type: "journal"
+  topics:
+    - "ai-safety"
+    - "trustworthy-ai"
+  badges: []
+  links:
+    arxiv: ""
+    doi: "https://doi.org/10.1109/MIC.2024.3453671"
+    pdf: "https://www.computer.org/csdl/magazine/ic/2024/05/10666776/1ZZMPFlapsQ"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: padhi2024comvas
+  title: "ComVas: Contextual Moral Values Alignment System"
+  authors:
+    - "Inkit Padhi"
+    - "Pierre Dognin"
+    - "Jesus Rios"
+    - "Ronny Luss"
+    - "Swapnaja Achintalwar"
+    - "Matthew Riemer"
+    - "Miao Liu"
+    - "Prasanna Sattigeri"
+    - "Manish Nagireddy"
+    - "Kush R. Varshney"
+    - "Djallel Bouneffouf"
+  year: 2024
+  venue: "IJCAI"
+  venue_full: "International Joint Conference on Artificial Intelligence (Demo Track)"
+  venue_type: "conference"
+  topics:
+    - "ai-safety"
+    - "nlp"
+  badges:
+    - "Demo"
+  links:
+    arxiv: ""
+    doi: "https://doi.org/10.24963/ijcai.2024/1026"
+    pdf: "https://www.ijcai.org/proceedings/2024/1026"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: true
+  abstract: ""
+
+- id: belgodere2024synthetic-data
+  title: "Auditing and Generating Synthetic Data with Controllable Trust Trade-offs"
+  authors:
+    - "Brian Belgodere"
+    - "Pierre Dognin"
+    - "Adam Ivankay"
+    - "Igor Melnyk"
+    - "Youssef Mroueh"
+    - "Aleksandra Mojsilovic"
+    - "Jiri Navratil"
+    - "Apoorva Nitsure"
+    - "Inkit Padhi"
+    - "Mattia Rigotti"
+    - "Jerret Ross"
+    - "Yair Schiff"
+    - "Radhika Vedpathak"
+    - "Richard A. Young"
+  year: 2024
+  venue: "IEEE JETCAS"
+  venue_full: "IEEE Journal on Emerging and Selected Topics in Circuits and Systems"
+  venue_type: "journal"
+  topics:
+    - "trustworthy-ai"
+    - "generative-models"
+  badges: []
+  links:
+    arxiv: ""
+    doi: "https://doi.org/10.1109/JETCAS.2024.3477976"
+    pdf: "https://ieeexplore.ieee.org/document/10713321"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+# ============================================================
+# 2023
+# ============================================================
+
+- id: kazemnejad2023positional-encoding
+  title: "The Impact of Positional Encoding on Length Generalization in Transformers"
+  authors:
+    - "Amirhossein Kazemnejad"
+    - "Inkit Padhi"
+    - "Karthikeyan Natesan Ramamurthy"
+    - "Payel Das"
+    - "Siva Reddy"
+  year: 2023
+  venue: "NeurIPS"
+  venue_full: "Advances in Neural Information Processing Systems"
+  venue_type: "conference"
+  topics:
+    - "machine-learning"
+    - "nlp"
+  badges: []
+  links:
+    arxiv: ""
+    doi: ""
+    pdf: "https://proceedings.neurips.cc/paper_files/paper/2023/file/4e85362c02172c0c6567ce593122d31c-Paper-Conference.pdf"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: true
+  abstract: ""
+
+- id: ghosh2023influence-fairness
+  title: "Influence Based Approaches to Algorithmic Fairness: A Closer Look"
+  authors:
+    - "Soumya Ghosh"
+    - "Prasanna Sattigeri"
+    - "Inkit Padhi"
+    - "Manish Nagireddy"
+    - "Jie Chen"
+  year: 2023
+  venue: "XAI in Action Workshop"
+  venue_full: "XAI in Action: Past, Present, and Future Applications"
+  venue_type: "workshop"
+  topics:
+    - "trustworthy-ai"
+    - "machine-learning"
+  badges: []
+  links:
+    arxiv: ""
+    doi: ""
+    pdf: "https://openreview.net/forum?id=3oysFpd6Pq"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: melnyk2023antibody-infilling
+  title: "Reprogramming Pretrained Language Models for Antibody Sequence Infilling"
+  authors:
+    - "Igor Melnyk"
+    - "Vijil Chenthamarakshan"
+    - "Pin-Yu Chen"
+    - "Payel Das"
+    - "Amit Dhurandhar"
+    - "Inkit Padhi"
+    - "Devleena Das"
+  year: 2023
+  venue: "ICML"
+  venue_full: "International Conference on Machine Learning"
+  venue_type: "conference"
+  topics:
+    - "drug-discovery"
+    - "generative-models"
+  badges: []
+  links:
+    arxiv: ""
+    doi: ""
+    pdf: "https://proceedings.mlr.press/v202/melnyk23a/melnyk23a.pdf"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: gero2023incentive-gap
+  title: "The Incentive Gap in Data Work in the Era of Large Models"
+  authors:
+    - "Katy Ilonka Gero"
+    - "Payel Das"
+    - "Pierre Dognin"
+    - "Inkit Padhi"
+    - "Prasanna Sattigeri"
+    - "Kush R. Varshney"
+  year: 2023
+  venue: "Nature Machine Intelligence"
+  venue_full: "Nature Machine Intelligence"
+  venue_type: "journal"
+  topics:
+    - "trustworthy-ai"
+  badges: []
+  links:
+    arxiv: ""
+    doi: "https://doi.org/10.1038/s42256-023-00673-x"
+    pdf: "https://www.nature.com/articles/s42256-023-00673-x"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: manica2023gt4sd
+  title: "Accelerating Material Design with the Generative Toolkit for Scientific Discovery"
+  authors:
+    - "Matteo Manica"
+    - "Jannis Born"
+    - "Joris Cadow"
+    - "Dimitrios Christofidellis"
+    - "Ashish Dave"
+    - "Dean Clarke"
+    - "Yves Gaetan Nana Teukam"
+    - "Giorgio Giannone"
+    - "Samuel C. Hoffman"
+    - "Matthew Buchan"
+    - "Vijil Chenthamarakshan"
+    - "Timothy Donovan"
+    - "Hsiang Han Hsu"
+    - "Federico Zipoli"
+    - "Oliver Schilter"
+    - "Akihiro Kishimoto"
+    - "Lisa Hamada"
+    - "Inkit Padhi"
+    - "Karl Wehden"
+    - "Lauren McHugh"
+    - "Alexy Khrabrov"
+    - "Payel Das"
+    - "Seiji Takeda"
+    - "John R. Smith"
+  year: 2023
+  venue: "npj Computational Materials"
+  venue_full: "npj Computational Materials"
+  venue_type: "journal"
+  topics:
+    - "drug-discovery"
+    - "generative-models"
+  badges: []
+  links:
+    arxiv: ""
+    doi: "https://doi.org/10.1038/s41524-023-01028-1"
+    pdf: "https://www.nature.com/articles/s41524-023-01028-1"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: draws2023stance-detection
+  title: "Explainable Cross-Topic Stance Detection for Search Results"
+  authors:
+    - "Tim Draws"
+    - "Karthikeyan Natesan Ramamurthy"
+    - "Ioana Baldini"
+    - "Amit Dhurandhar"
+    - "Inkit Padhi"
+    - "Benjamin Timmermans"
+    - "Nava Tintarev"
+  year: 2023
+  venue: "CHIIR"
+  venue_full: "Conference on Human Information Interaction and Retrieval"
+  venue_type: "conference"
+  topics:
+    - "nlp"
+    - "trustworthy-ai"
+  badges: []
+  links:
+    arxiv: ""
+    doi: "https://doi.org/10.1145/3576840.3578296"
+    pdf: "https://doi.org/10.1145/3576840.3578296"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: belgodere2023molformer-cloud
+  title: "Cloud-Based Real-Time Molecular Screening Platform with MolFormer"
+  authors:
+    - "Brian Belgodere"
+    - "Vijil Chenthamarakshan"
+    - "Payel Das"
+    - "Pierre Dognin"
+    - "Toby Kurien"
+    - "Igor Melnyk"
+    - "Youssef Mroueh"
+    - "Inkit Padhi"
+    - "Mattia Rigotti"
+    - "Jarret Ross"
+    - "Yair Schiff"
+    - "Richard A. Young"
+  year: 2023
+  venue: "ECML-PKDD"
+  venue_full: "Machine Learning and Knowledge Discovery in Databases"
+  venue_type: "conference"
+  topics:
+    - "drug-discovery"
+    - "generative-models"
+  badges: []
+  links:
+    arxiv: ""
+    doi: "https://doi.org/10.1007/978-3-031-26422-1_47"
+    pdf: "https://link.springer.com/chapter/10.1007/978-3-031-26422-1_47"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+# ============================================================
+# 2022
+# ============================================================
+
+- id: sattigeri2022fair-jackknife
+  title: "Fair Infinitesimal Jackknife: Mitigating the Influence of Biased Training Data Points Without Refitting"
+  authors:
+    - "Prasanna Sattigeri"
+    - "Soumya Ghosh"
+    - "Inkit Padhi"
+    - "Pierre Dognin"
+    - "Kush R. Varshney"
+  year: 2022
+  venue: "NeurIPS"
+  venue_full: "Advances in Neural Information Processing Systems"
+  venue_type: "conference"
+  topics:
+    - "trustworthy-ai"
+    - "machine-learning"
+  badges: []
+  links:
+    arxiv: ""
+    doi: ""
+    pdf: "https://proceedings.neurips.cc/paper_files/paper/2022/hash/e94481b99473c83b2e79d91c64eb37d1-Abstract-Conference.html"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: ross2022molformer
+  title: "Large-Scale Chemical Language Representations Capture Molecular Structure and Properties"
+  authors:
+    - "Jerret Ross"
+    - "Brian Belgodere"
+    - "Vijil Chenthamarakshan"
+    - "Inkit Padhi"
+    - "Youssef Mroueh"
+    - "Payel Das"
+  year: 2022
+  venue: "Nature Machine Intelligence"
+  venue_full: "Nature Machine Intelligence"
+  venue_type: "journal"
+  topics:
+    - "drug-discovery"
+    - "generative-models"
+  badges: []
+  links:
+    arxiv: ""
+    doi: "https://doi.org/10.1038/s42256-022-00580-7"
+    pdf: "https://www.nature.com/articles/s42256-022-00580-7"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: dognin2022image-captioning
+  title: "Image Captioning as an Assistive Technology: Lessons Learned from VizWiz 2020 Challenge"
+  authors:
+    - "Pierre Dognin"
+    - "Igor Melnyk"
+    - "Youssef Mroueh"
+    - "Inkit Padhi"
+    - "Mattia Rigotti"
+    - "Jarret Ross"
+    - "Yair Schiff"
+    - "Richard A. Young"
+    - "Brian Belgodere"
+  year: 2022
+  venue: "JAIR"
+  venue_full: "Journal of Artificial Intelligence Research"
+  venue_type: "journal"
+  topics:
+    - "nlp"
+    - "generative-models"
+  badges: []
+  links:
+    arxiv: ""
+    doi: "https://doi.org/10.1613/jair.1.13113"
+    pdf: "https://jair.org/index.php/jair/article/view/13113/26765"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+# ============================================================
+# 2021
+# ============================================================
+
+- id: dognin2021regen
+  title: "ReGen: Reinforcement Learning for Text and Knowledge Base Generation using Pretrained Language Models"
+  authors:
+    - "Pierre Dognin"
+    - "Inkit Padhi"
+    - "Igor Melnyk"
+    - "Payel Das"
+  year: 2021
+  venue: "EMNLP"
+  venue_full: "Conference on Empirical Methods in Natural Language Processing"
+  venue_type: "conference"
+  topics:
+    - "nlp"
+    - "generative-models"
+  badges: []
+  links:
+    arxiv: ""
+    doi: "https://doi.org/10.18653/v1/2021.emnlp-main.83"
+    pdf: "https://aclanthology.org/2021.emnlp-main.83/"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: padhi2021tabular-transformers
+  title: "Tabular Transformers for Modeling Multivariate Time Series"
+  authors:
+    - "Inkit Padhi"
+    - "Yair Schiff"
+    - "Igor Melnyk"
+    - "Mattia Rigotti"
+    - "Youssef Mroueh"
+    - "Pierre Dognin"
+    - "Jerret Ross"
+    - "Ravi Nair"
+    - "Erik Altman"
+  year: 2021
+  venue: "ICASSP"
+  venue_full: "IEEE International Conference on Acoustics, Speech and Signal Processing"
+  venue_type: "conference"
+  topics:
+    - "machine-learning"
+  badges: []
+  links:
+    arxiv: ""
+    doi: "https://doi.org/10.1109/ICASSP39728.2021.9414142"
+    pdf: "https://ieeexplore.ieee.org/document/9414142"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: true
+  abstract: ""
+
+- id: das2021antimicrobial
+  title: "Accelerated Antimicrobial Discovery via Deep Generative Models and Molecular Dynamics Simulations"
+  authors:
+    - "Payel Das"
+    - "Tom Sercu"
+    - "Kahini Wadhawan"
+    - "Inkit Padhi"
+    - "Sebastian Gehrmann"
+    - "Flaviu Cipcigan"
+    - "Vijil Chenthamarakshan"
+    - "Hendrik Strobelt"
+    - "Cicero dos Santos"
+    - "Pin-Yu Chen"
+    - "Yi Yan Yang"
+    - "Jeremy P. K. Tan"
+    - "James Hedrick"
+    - "Jason Crain"
+    - "Aleksandra Mojsilovic"
+  year: 2021
+  venue: "Nature Biomedical Engineering"
+  venue_full: "Nature Biomedical Engineering"
+  venue_type: "journal"
+  topics:
+    - "drug-discovery"
+    - "generative-models"
+  badges: []
+  links:
+    arxiv: ""
+    doi: "https://doi.org/10.1038/s41551-021-00689-x"
+    pdf: "https://www.nature.com/articles/s41551-021-00689-x"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: madaan2021counterfactuals
+  title: "Generate Your Counterfactuals: Towards Controlled Counterfactual Generation for Text"
+  authors:
+    - "Nishtha Madaan"
+    - "Inkit Padhi"
+    - "Naveen Panwar"
+    - "Diptikalyan Saha"
+  year: 2021
+  venue: "AAAI"
+  venue_full: "AAAI Conference on Artificial Intelligence"
+  venue_type: "conference"
+  topics:
+    - "nlp"
+    - "trustworthy-ai"
+  badges: []
+  links:
+    arxiv: ""
+    doi: "https://doi.org/10.1609/aaai.v35i15.17594"
+    pdf: "https://ojs.aaai.org/index.php/AAAI/article/view/17594"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+# ============================================================
+# 2020
+# ============================================================
+
+- id: dognin2020dualtkb
+  title: "DualTKB: A Dual Learning Bridge between Text and Knowledge Base"
+  authors:
+    - "Pierre Dognin"
+    - "Igor Melnyk"
+    - "Inkit Padhi"
+    - "Cicero Nogueira dos Santos"
+    - "Payel Das"
+  year: 2020
+  venue: "EMNLP"
+  venue_full: "Conference on Empirical Methods in Natural Language Processing"
+  venue_type: "conference"
+  topics:
+    - "nlp"
+    - "generative-models"
+  badges: []
+  links:
+    arxiv: ""
+    doi: "https://doi.org/10.18653/v1/2020.emnlp-main.694"
+    pdf: "https://aclanthology.org/2020.emnlp-main.694/"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: padhi2020implicit-text-generation
+  title: "Learning Implicit Text Generation via Feature Matching"
+  authors:
+    - "Inkit Padhi"
+    - "Pierre Dognin"
+    - "Ke Bai"
+    - "Cicero Nogueira dos Santos"
+    - "Vijil Chenthamarakshan"
+    - "Youssef Mroueh"
+    - "Payel Das"
+  year: 2020
+  venue: "ACL"
+  venue_full: "Annual Meeting of the Association for Computational Linguistics"
+  venue_type: "conference"
+  topics:
+    - "nlp"
+    - "generative-models"
+  badges: []
+  links:
+    arxiv: ""
+    doi: "https://doi.org/10.18653/v1/2020.acl-main.354"
+    pdf: "https://aclanthology.org/2020.acl-main.354/"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: chenthamarakshan2020cogmol
+  title: "CogMol: Target-Specific and Selective Drug Design for COVID-19 Using Deep Generative Models"
+  authors:
+    - "Vijil Chenthamarakshan"
+    - "Payel Das"
+    - "Samuel Hoffman"
+    - "Hendrik Strobelt"
+    - "Inkit Padhi"
+    - "Kar Wai Lim"
+    - "Benjamin Hoover"
+    - "Matteo Manica"
+    - "Jannis Born"
+    - "Teodoro Laino"
+    - "Aleksandra Mojsilovic"
+  year: 2020
+  venue: "NeurIPS"
+  venue_full: "Advances in Neural Information Processing Systems"
+  venue_type: "conference"
+  topics:
+    - "drug-discovery"
+    - "generative-models"
+  badges: []
+  links:
+    arxiv: ""
+    doi: ""
+    pdf: "https://proceedings.neurips.cc/paper/2020/hash/2d16ad1968844a4300e9a490588ff9f8-Abstract.html"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: dognin2020noisy-captioning
+  title: "Alleviating Noisy Data in Image Captioning with Cooperative Distillation"
+  authors:
+    - "Pierre Dognin"
+    - "Igor Melnyk"
+    - "Youssef Mroueh"
+    - "Inkit Padhi"
+    - "Mattia Rigotti"
+    - "Jarret Ross"
+    - "Yair Schiff"
+  year: 2020
+  venue: "arXiv"
+  venue_full: "arXiv preprint"
+  venue_type: "preprint"
+  topics:
+    - "generative-models"
+  badges: []
+  links:
+    arxiv: "https://arxiv.org/abs/2012.11691"
+    doi: ""
+    pdf: "https://arxiv.org/abs/2012.11691"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+# ============================================================
+# 2019
+# ============================================================
+
+- id: santos2019perceptual-features
+  title: "Learning Implicit Generative Models by Matching Perceptual Features"
+  authors:
+    - "Cicero Nogueira dos Santos"
+    - "Youssef Mroueh"
+    - "Inkit Padhi"
+    - "Pierre Dognin"
+  year: 2019
+  venue: "ICCV"
+  venue_full: "IEEE/CVF International Conference on Computer Vision"
+  venue_type: "conference"
+  topics:
+    - "generative-models"
+    - "machine-learning"
+  badges: []
+  links:
+    arxiv: ""
+    doi: ""
+    pdf: "https://openaccess.thecvf.com/content_ICCV_2019/papers/dos_Santos_Learning_Implicit_Generative_Models_by_Matching_Perceptual_Features_ICCV_2019_paper.pdf"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: mroueh2019sobolev
+  title: "Sobolev Independence Criterion"
+  authors:
+    - "Youssef Mroueh"
+    - "Tom Sercu"
+    - "Mattia Rigotti"
+    - "Inkit Padhi"
+    - "Cicero Nogueira dos Santos"
+  year: 2019
+  venue: "NeurIPS"
+  venue_full: "Advances in Neural Information Processing Systems"
+  venue_type: "conference"
+  topics:
+    - "machine-learning"
+  badges: []
+  links:
+    arxiv: ""
+    doi: ""
+    pdf: "https://papers.neurips.cc/paper_files/paper/2019/hash/79a3308b13cd31f096d8a4a34f96b66b-Abstract.html"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: sercu2019ivels
+  title: "Interactive Visual Exploration of Latent Space (IVELS) for Peptide Auto-Encoder Model Selection"
+  authors:
+    - "Tom Sercu"
+    - "Sebastian Gehrmann"
+    - "Hendrik Strobelt"
+    - "Payel Das"
+    - "Inkit Padhi"
+    - "Cicero Dos Santos"
+    - "Kahini Wadhawan"
+    - "Vijil Chenthamarakshan"
+  year: 2019
+  venue: "ICLR Workshop"
+  venue_full: "ICLR Workshop"
+  venue_type: "workshop"
+  topics:
+    - "drug-discovery"
+    - "generative-models"
+  badges: []
+  links:
+    arxiv: ""
+    doi: ""
+    pdf: "https://openreview.net/forum?id=Hkl8EILFdN"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: santos2019generative-feature-matching
+  title: "Generative Feature Matching Networks"
+  authors:
+    - "Cicero Nogueira dos Santos"
+    - "Inkit Padhi"
+    - "Pierre Dognin"
+    - "Youssef Mroueh"
+  year: 2019
+  venue: "ICLR Workshop"
+  venue_full: "ICLR Workshop"
+  venue_type: "workshop"
+  topics:
+    - "generative-models"
+    - "machine-learning"
+  badges: []
+  links:
+    arxiv: ""
+    doi: ""
+    pdf: "https://openreview.net/forum?id=Syfz6sC9tQ"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+# ============================================================
+# 2018
+# ============================================================
+
+- id: santos2018fighting-offensive
+  title: "Fighting Offensive Language on Social Media with Unsupervised Text Style Transfer"
+  authors:
+    - "Cicero Nogueira dos Santos"
+    - "Igor Melnyk"
+    - "Inkit Padhi"
+  year: 2018
+  venue: "ACL"
+  venue_full: "Annual Meeting of the Association for Computational Linguistics"
+  venue_type: "conference"
+  topics:
+    - "nlp"
+  badges: []
+  links:
+    arxiv: ""
+    doi: "https://doi.org/10.18653/v1/P18-2031"
+    pdf: "https://aclanthology.org/P18-2031/"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: zhao2018biomimicry
+  title: "Data Driven Techniques for Organizing Scientific Articles Relevant to Biomimicry"
+  authors:
+    - "Yuanshuo Zhao"
+    - "Ioana Baldini"
+    - "Prasanna Sattigeri"
+    - "Inkit Padhi"
+    - "Yoong Keok Lee"
+    - "Ethan Smith"
+  year: 2018
+  venue: "AIES"
+  venue_full: "AAAI/ACM Conference on AI, Ethics, and Society"
+  venue_type: "conference"
+  topics:
+    - "machine-learning"
+  badges: []
+  links:
+    arxiv: ""
+    doi: "https://doi.org/10.1145/3278721.3278755"
+    pdf: "https://dl.acm.org/doi/10.1145/3278721.3278755"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+- id: das2018pepcvae
+  title: "PepCVAE: Semi-Supervised Targeted Design of Antimicrobial Peptide Sequences"
+  authors:
+    - "Payel Das"
+    - "Kahini Wadhawan"
+    - "Oscar Chang"
+    - "Tom Sercu"
+    - "Cicero Dos Santos"
+    - "Matthew Riemer"
+    - "Vijil Chenthamarakshan"
+    - "Inkit Padhi"
+    - "Aleksandra Mojsilovic"
+  year: 2018
+  venue: "arXiv"
+  venue_full: "arXiv preprint"
+  venue_type: "preprint"
+  topics:
+    - "drug-discovery"
+    - "generative-models"
+  badges: []
+  links:
+    arxiv: "https://arxiv.org/abs/1810.07743"
+    doi: ""
+    pdf: "https://arxiv.org/abs/1810.07743"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+# ============================================================
+# 2017
+# ============================================================
+
+- id: melnyk2017text-attribute-transfer
+  title: "Improved Neural Text Attribute Transfer with Non-parallel Data"
+  authors:
+    - "Igor Melnyk"
+    - "Cicero Nogueira dos Santos"
+    - "Kahini Wadhawan"
+    - "Inkit Padhi"
+    - "Abhishek Kumar"
+  year: 2017
+  venue: "arXiv"
+  venue_full: "arXiv preprint"
+  venue_type: "preprint"
+  topics:
+    - "nlp"
+    - "generative-models"
+  badges: []
+  links:
+    arxiv: "https://arxiv.org/abs/1711.09395"
+    doi: ""
+    pdf: "https://arxiv.org/abs/1711.09395"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: false
+  abstract: ""
+
+# ============================================================
+# 2016
+# ============================================================
+
+- id: shi2016string-neural-mt
+  title: "Does String-Based Neural MT Learn Source Syntax?"
+  authors:
+    - "Xing Shi"
+    - "Inkit Padhi"
+    - "Kevin Knight"
+  year: 2016
+  venue: "EMNLP"
+  venue_full: "Conference on Empirical Methods in Natural Language Processing"
+  venue_type: "conference"
+  topics:
+    - "nlp"
+    - "machine-learning"
+  badges: []
+  links:
+    arxiv: ""
+    doi: "https://doi.org/10.18653/v1/D16-1159"
+    pdf: "https://aclanthology.org/D16-1159"
+    code: ""
+    video: ""
+    project: ""
+    slides: ""
+  citations: 0
+  featured: true
+  abstract: ""

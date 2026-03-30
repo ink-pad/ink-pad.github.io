@@ -1,0 +1,78 @@
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.Params.author }}",
+  "url": "{{ site.BaseURL }}",
+  "email": "{{ site.Params.email }}",
+  "jobTitle": "{{ site.Params.position }}",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "{{ site.Params.institution }}"
+  },
+  "sameAs": [
+    {{- $links := slice -}}
+    {{- range hugo.Data.social -}}
+      {{- if ne .icon "email" -}}
+        {{- $links = $links | append .url -}}
+      {{- end -}}
+    {{- end -}}
+    {{- range $i, $l := $links }}{{ if $i }},{{ end }}
+    "{{ $l }}"
+    {{- end }}
+  ],
+  "image": "{{ site.Params.profileImage | absURL }}"
+}
+</script>
+{{ end }}
+
+{{ if and (eq .Section "blog") .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ .Title }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.Params.author }}"
+  },
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+  "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}",
+  "url": "{{ .Permalink }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  }
+}
+</script>
+{{ end }}
+
+{{ if eq .Section "papers" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Publications by {{ site.Params.author }}",
+  "itemListElement": [
+    {{- range $i, $pub := hugo.Data.publications -}}
+    {{ if $i }},{{ end }}
+    {
+      "@type": "ScholarlyArticle",
+      "position": {{ add $i 1 }},
+      "name": "{{ $pub.title }}",
+      "author": [
+        {{- range $j, $a := $pub.authors -}}
+        {{ if $j }},{{ end }}{"@type": "Person", "name": "{{ $a }}"}
+        {{- end -}}
+      ],
+      "datePublished": "{{ $pub.year }}",
+      {{ with $pub.links.doi }}"identifier": {"@type": "PropertyValue", "propertyID": "DOI", "value": "{{ . | replaceRE `^https?://doi.org/` `` }}"},{{ end }}
+      "isPartOf": {"@type": "Periodical", "name": "{{ $pub.venue_full | default $pub.venue }}"}
+    }
+    {{- end -}}
+  ]
+}
+</script>
+{{ end }}

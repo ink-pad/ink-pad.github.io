@@ -1,0 +1,83 @@
+- date: "2025-10-20"
+  category: award
+  title: "Best Paper Award at AIES 2025"
+  body: "\"When in Doubt, Cascade: Towards Building Efficient and Capable Guardrails\" received the Best Paper Award at AIES 2025."
+  url: "https://www.aies-conference.com/2025/best-papers-awards/"
+  url_label: "Announcement"
+
+- date: "2025-09-01"
+  category: release
+  title: "Granite Guardian 3.3 released"
+  body: "Granite Guardian 3.3 is here, featuring hybrid thinking mode and a 3rd-place finish on the LLM-AggreFact benchmark."
+  url: "https://huggingface.co/ibm-granite/granite-guardian-3.3-8b"
+  url_label: "Model"
+
+- date: "2025-04-24"
+  category: talk
+  title: "Presenting CAST at ICLR 2025"
+  body: "Presenting CAST on conditional activation steering at ICLR in Singapore."
+  url: "https://iclr.cc/virtual/2025/poster/29806"
+  url_label: "Poster"
+
+- date: "2025-04-01"
+  category: award
+  title: "Granite Guardian tops GuardBench leaderboard"
+  body: "Granite Guardian tops GuardBench, a leaderboard for guardrail models."
+  url: "https://research.ibm.com/blog/granite-guardian-tops-guardbench"
+  url_label: "Blog"
+
+- date: "2025-02-13"
+  category: paper
+  title: "Granite Guardian accepted at NAACL 2025 (Oral)"
+  body: "Granite Guardian has been accepted to the NAACL '25 Industry Track as an Oral presentation. The latest Granite Guardian 3.1 model now also covers agentic risks."
+  url: "https://arxiv.org/abs/2412.07724"
+  url_label: "arXiv"
+
+- date: "2025-01-22"
+  category: paper
+  title: "CAST accepted as spotlight at ICLR 2025"
+  body: "CAST, our work on conditional activation steering, is accepted as a spotlight at ICLR '25."
+  url: "https://openreview.net/forum?id=Oi47wc10sm"
+  url_label: "Paper"
+
+- date: "2024-12-16"
+  category: talk
+  title: "Presenting at NeurIPS 2024 Pluralistic Alignment workshop"
+  body: "Attending NeurIPS '24 to present our work on value alignment at the Pluralistic Alignment workshop."
+  url: "https://pluralistic-alignment.github.io/"
+  url_label: "Workshop"
+
+- date: "2024-12-09"
+  category: paper
+  title: "Granite Guardian preprint on arXiv"
+  body: "Our paper 'Granite Guardian' is now available as a preprint on arXiv."
+  url: "https://arxiv.org/abs/2412.07724"
+  url_label: "arXiv"
+
+- date: "2024-11-06"
+  category: talk
+  title: "Presenting at EMNLP 2024"
+  body: "Presenting 'Value Alignment From Unstructured Text' at EMNLP 2024."
+  url: "https://aclanthology.org/2024.emnlp-industry.81/"
+  url_label: "Paper"
+
+- date: "2024-10-21"
+  category: release
+  title: "Granite Guardian 3.0 released"
+  body: "Granite Guardian 3.0 is out! It helps detect input and response risks, including various harm and RAG hallucinations."
+  url: "https://github.com/ibm-granite/granite-guardian"
+  url_label: "GitHub"
+
+- date: "2024-09-06"
+  category: paper
+  title: "CAST: Conditional activation steering"
+  body: "CAST, work on conditional activation steering by summer intern Bruce Lee, is now on arXiv."
+  url: "https://arxiv.org/abs/2409.05907"
+  url_label: "arXiv"
+
+- date: "2024-08-23"
+  category: paper
+  title: "Alignment Studio accepted to IEEE Internet Computing"
+  body: "Alignment Studio is accepted to IEEE Internet Computing. We introduce an architecture that facilitates alignment of LMs to specific values, norms and regulations within a context."
+  url: "https://ieeexplore.ieee.org/abstract/document/10666776/"
+  url_label: "Paper"

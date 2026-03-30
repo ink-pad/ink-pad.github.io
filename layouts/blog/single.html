@@ -1,0 +1,82 @@
+{{ define "main" }}
+<div class="reading-progress" id="reading-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Reading progress"></div>
+
+<article class="section">
+  <div class="container" style="max-width: var(--container-narrow);">
+    <header class="post-header">
+      <h1 class="post-header__title">{{ .Title }}</h1>
+      <div class="post-header__meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ dateFormat "January 2, 2006" .Date }}</time>
+        <span class="post-card__dot">&middot;</span>
+        <span>{{ math.Round (div (countwords .Content) 200.0) }} min read</span>
+        {{ with .Lastmod }}
+          {{ if ne ($.Date.Format "2006-01-02") (.Format "2006-01-02") }}
+            <span class="post-card__dot">&middot;</span>
+            <span>Updated {{ dateFormat "Jan 2, 2006" . }}</span>
+          {{ end }}
+        {{ end }}
+      </div>
+      {{ with .Params.tags }}
+        <div class="post-header__tags">
+          {{ range . }}
+            <a href="{{ "tags/" | absURL }}{{ . | urlize }}/" class="post-tag">{{ . }}</a>
+          {{ end }}
+        </div>
+      {{ end }}
+    </header>
+
+    {{/* Table of Contents */}}
+    {{ if .TableOfContents }}
+    <div class="toc">
+      <p class="toc__title">Table of Contents</p>
+      <nav aria-label="Table of contents">
+        {{ .TableOfContents }}
+      </nav>
+    </div>
+    {{ end }}
+
+    <div class="prose" id="article-content">
+      {{ .Content }}
+    </div>
+
+    {{/* Social Share */}}
+    {{ partial "social-share.html" . }}
+
+    {{/* Post Navigation */}}
+    <nav class="post-nav" aria-label="Post navigation">
+      {{ with .PrevInSection }}
+        <a href="{{ .Permalink }}" class="post-nav__link">
+          <span class="post-nav__label">&larr; Previous</span>
+          <span class="post-nav__title">{{ .Title }}</span>
+        </a>
+      {{ end }}
+      {{ with .NextInSection }}
+        <a href="{{ .Permalink }}" class="post-nav__link post-nav__link--next">
+          <span class="post-nav__label">Next &rarr;</span>
+          <span class="post-nav__title">{{ .Title }}</span>
+        </a>
+      {{ end }}
+    </nav>
+
+    {{/* Comments */}}
+    {{ partial "utterances.html" . }}
+  </div>
+</article>
+
+<script>
+// Reading progress bar
+(function() {
+  var bar = document.getElementById('reading-progress');
+  var article = document.getElementById('article-content');
+  if (!bar || !article) return;
+  window.addEventListener('scroll', function() {
+    var rect = article.getBoundingClientRect();
+    var total = article.scrollHeight - window.innerHeight;
+    var scrolled = -rect.top;
+    var pct = Math.min(100, Math.max(0, (scrolled / total) * 100));
+    bar.style.width = pct + '%';
+    bar.setAttribute('aria-valuenow', Math.round(pct));
+  }, { passive: true });
+})();
+</script>
+{{ end }}

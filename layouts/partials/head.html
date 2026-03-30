@@ -1,0 +1,63 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}{{ end }}">
+{{ with site.Params.keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
+<meta name="author" content="{{ site.Params.author }}">
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{/* Open Graph */}}
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:type" content="{{ if or .IsHome (not .IsPage) }}website{{ else }}article{{ end }}">
+<meta property="og:image" content="{{ with .Params.ogImage }}{{ . | absURL }}{{ else }}{{ site.Params.ogImage | absURL }}{{ end }}">
+{{ if and .IsPage (not .IsHome) -}}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+{{ with .Lastmod }}<meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
+{{- end }}
+
+{{/* Twitter Card */}}
+<meta name="twitter:card" content="summary_large_image">
+{{ with site.Params.twitterUser }}<meta name="twitter:creator" content="@{{ . }}">{{ end }}
+<meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}{{ end }}">
+
+{{/* Fonts */}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+
+{{/* CSS - concat all partials since Hugo doesn't resolve @import */}}
+{{- $tokens := resources.Get "css/_tokens.css" -}}
+{{- $reset := resources.Get "css/_reset.css" -}}
+{{- $typography := resources.Get "css/_typography.css" -}}
+{{- $layout := resources.Get "css/_layout.css" -}}
+{{- $nav := resources.Get "css/_nav.css" -}}
+{{- $hero := resources.Get "css/_hero.css" -}}
+{{- $bio := resources.Get "css/_bio.css" -}}
+{{- $news := resources.Get "css/_news.css" -}}
+{{- $publications := resources.Get "css/_publications.css" -}}
+{{- $blog := resources.Get "css/_blog.css" -}}
+{{- $components := resources.Get "css/_components.css" -}}
+{{- $utilities := resources.Get "css/_utilities.css" -}}
+{{- $css := slice $tokens $reset $typography $layout $nav $hero $bio $news $publications $blog $components $utilities | resources.Concat "css/bundle.css" | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+
+{{/* Theme detection - inline to prevent FOUC */}}
+<script>
+(function(){var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)})();
+</script>
+
+{{/* RSS */}}
+{{ range .AlternativeOutputFormats -}}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink (printf "%s - %s" site.Title .Name) | safeHTML }}
+{{ end -}}
+
+{{/* Structured Data */}}
+{{- partial "seo.html" . -}}
+
+{{/* Favicon */}}
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/favicon.png">

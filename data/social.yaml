@@ -1,0 +1,23 @@
+- id: scholar
+  label: Google Scholar
+  url: "https://scholar.google.com/citations?user=c4yuGSoAAAAJ&hl=en"
+  icon: scholar
+  rel: me
+
+- id: github
+  label: GitHub
+  url: "https://github.com/ink-pad"
+  icon: github
+  rel: me
+
+- id: huggingface
+  label: Hugging Face
+  url: "https://huggingface.co/ink-pad"
+  icon: huggingface
+  rel: me
+
+- id: email
+  label: Email
+  url: "mailto:inkit.padhi@gmail.com"
+  icon: email
+  rel: ""
