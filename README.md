@@ -1,7 +1,6 @@
 # ink-pad.github.io
 
 Personal website built with [Hugo](https://gohugo.io/).
-Hosted at www.inkit.nyc
 
 ## Dev
 
